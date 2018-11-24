@@ -1,0 +1,17 @@
+from Tkinter import *
+#se definen funciones
+root=Tk()
+root.title("CLASES DE INEGI")
+menub=Menu(root)
+filemenu=Menu(menub,tearoff=0)
+filemenu.add_command(label="MOSTRAR") #despues de "mostrar" +command=nombredefuncion
+filemenu.add_command(label="AGREGAR")
+filemenu.add_command(label="ELIMINAR")
+filemenu.add_command(label="CERRAR")
+
+filemenu.add_separator()
+
+filemenu.add_command(label="SALIR", command=root.quit)
+menub.add_cascade(label="OPCIONES",menu=filemenu)
+root.config(menu=menub)
+root.mainloop()
