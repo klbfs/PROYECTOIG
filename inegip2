@@ -1,0 +1,165 @@
+from Tkinter import *
+
+def CuentaAdmin():
+	print("Clase Cuenta de Administrador")
+
+def Clases():
+  v1=Toplevel(root)
+	e12=Label(v1, text="Actividad Economica")
+	e13=Label(v1, text="Buscador")
+	e14=Label(v1, text="Capital")
+	e15=Label(v1, text=Departamentos")
+	e16=Label(v1, text="Empresa")
+	e17=Label(v1, text="Estadisticas")
+	e18=Label(v1, text="Fundaciones")
+	e19=Label(v1, text="Instalaciones")
+	e20=Label(v1, text="Imagenes y Video")
+	e21=Label(v1, text="Informacion de la Empresa")
+	e22=Label(v1, text="Ubicacion")
+	e23=Label(v1, text="Redes Sociales")
+  e12.pack()
+  e13.pack()
+  e14.pack()
+  e15.pack()
+  e16.pack()
+	e17.pack()
+  e18.pack()
+  e19.pack()
+  e20.pack()
+  e21.pack()
+  e22.pack()
+  e23.pack()
+  
+
+def Atributos():
+  v3=Toplevel(root)
+	e111=Label(v3,text="De que clase?")
+
+def Tecnicas_Prog():
+	v2=Toplevel(root)
+  e1=Label(v2, text="Profesor: Emiliavo Nava")
+	e2=Label(v2, text="Grupo 2")
+	e3=Label(v2, text="Horario: \n Lunes: 7:00 - 9:00 \n Miercoles: 7:00 - 9:00 \n Viernes 7:00 - 9:00")
+	e4=Label(v2, text="Semestre: 2019-1")
+  e1.pack()
+  e2.pack()
+  e3.pack()
+  e4.pack()
+def Referencias():
+	print("URL: http://www.beta.inegi.org.mx/temas/directorio/")
+
+def MenuBusqueda():
+	print("Clase Menu Busqueda")
+
+def Lideres():
+	print("Clase Lideres Empresariales")
+def busqueda():
+  b=Button(text="editar")
+  b1=Button(text="mostrar")
+  b2=Button(text="agregar")
+  b3=Button(text="eliminar")
+  b.pack()
+  b1.pack()
+  b2.pack()
+  b3.pack()
+
+
+root = Tk()
+
+foto = PhotoImage(file="inegi.png")
+etiqueta= Label(root, image=foto)
+etiqueta.pack(side=TOP)
+
+bienvenida= Label(root, text="Bienvenido a la Pagina Oficial del INEGI",bg="grey50",fg="white",  font='Helvetica 14 bold')
+bienvenida.pack(side=TOP, fill=X)
+modulo= Label(root, text="EMPRESAS",bg="white",fg="navy", font='Helvetica 18 bold')
+modulo.pack(side=TOP, fill=X)
+
+menu = Menu(root)
+root.config(menu=menu)
+
+subMenu1 = Menu(menu)
+
+menu.add_cascade(label="Usuario", menu=subMenu1)
+subMenu1.add_command(label="Cuenta Administrador", command= CuentaAdmin)
+subMenu1.add_separator()
+subMenu1.add_command(label="Salir", command= root.quit)
+
+subMenu2= Menu(menu)
+
+menu.add_cascade(label="Informacion Proyecto", menu=subMenu2)
+subMenu2.add_command(label="Clases", command= Clases )
+subMenu2.add_command(label="Atributos", command= Atributos)
+subMenu2.add_separator()
+subMenu2.add_command(label="Tecnicas de Programacion", command= Tecnicas_Prog)
+
+subMenu3 = Menu(menu)
+
+menu.add_cascade(label="INEGI", menu=subMenu3)
+subMenu3.add_command(label="Referencias", command= Referencias)
+subMenu3.add_separator()
+
+#TOOLBAR ****
+
+toolbar = Frame(root, bg="medium aquamarine")
+insertar = Button(toolbar, text= "Busqueda Avanzada", command= MenuBusqueda, bg="white", fg="medium aquamarine")
+insertar.pack(side=LEFT, padx=2, pady=2, ipadx=23)
+insertar1 = Button(toolbar, text= "Lideres Empresariales", command= Lideres, bg="white", fg="medium aquamarine")
+insertar1.pack(side=LEFT, padx=2, pady=2, ipadx=22)
+insertar2 = Button(toolbar, text= "Usuario", command= Lideres, bg="white", fg="medium aquamarine")
+insertar2.pack(side=LEFT, padx=2, pady=2, ipadx=23)
+insertar3 = Button(toolbar, text= "Cliente", command= Lideres, bg="white", fg="medium aquamarine")
+insertar3.pack(side=LEFT, padx=2, pady=2, ipadx=22)
+insertar4 = Button(toolbar, text= "Imagenes y Video", command= Lideres, bg="white", fg="medium aquamarine")
+insertar4.pack(side=LEFT, padx=2, pady=2, ipadx=23)
+
+toolbar.pack(side=TOP, fill=X)
+
+espacio = Label(root,text= "")
+espacio1 = Label(root,text= "")
+espacio2 = Label(root,text= "")
+espacio3 = Label(root,text= "")
+espacio4 = Label(root,text= "")
+espacio5 = Label(root,text= "", bg="medium aquamarine")
+espacio6 = Label(root,text= "")
+
+espacio.pack()
+elegir = Label (root, text="Escriba la Opcion deseada:", font='Helvetica 14 bold', bg="gray80")
+opcion = Entry(root)
+
+
+
+elegir.pack(fill=X)#*****************************
+
+espacio1.pack()
+
+opcion.pack()#***************************************
+
+espacio3.pack()
+
+Boton1=Button(text="Buscar", fg="white", bg="navy", font="Helvetica 18 bold", command=busqueda)
+Boton1.pack(ipadx=65, ipady=2)
+
+espacio4.pack()
+
+espacio5.pack(fill=X)
+#************************************
+
+
+
+
+
+espacio8 = Label(root,text= "")
+espacio8.pack()
+
+espacio7 = Label(root,text= "", bg="navy")
+espacio7.pack(fill=X)
+
+
+#STATUS BAR****
+
+status = Label(root, text="Todos los Derechos Reservados. Tecnicas de Programacion 2019", bd=1, relief=SUNKEN, anchor=W)
+status.pack(side=BOTTOM, fill=X)
+
+
+root.mainloop()
