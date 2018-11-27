@@ -97,7 +97,7 @@ root.config(menu=menu)
 subMenu1 = Menu(menu)
 
 menu.add_cascade(label="Usuario", menu=subMenu1)
-subMenu1.add_command(label="Cuenta Administrador", command= CuentaAdmin)
+subMenu1.add_command(label="nombre", command= login)
 subMenu1.add_separator()
 subMenu1.add_command(label="Salir", command= root.quit)
 
