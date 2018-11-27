@@ -46,7 +46,7 @@ def Clases():
 
 def Atributos():
   	v3=Toplevel(root)
-	e111=Label(v3,text="De que clase?")
+	e111=Label(v3,text="de que clase?")  #poner los atributos considerados en vez de que clase
 	e111.pack()
 	en22=Entry(v3)
 	en22.pack()
@@ -118,13 +118,7 @@ subMenu3.add_separator()
 #TOOLBAR ****
 
 toolbar = Frame(root, bg="medium aquamarine")
-insertar1 = Button(toolbar, text= "Lideres Empresariales", command= Lideres, bg="white", fg="medium aquamarine")
-insertar1.pack(side=LEFT, padx=2, pady=2, ipadx=22)
-insertar2 = Button(toolbar, text= "Usuario", command= Lideres, bg="white", fg="medium aquamarine")
-insertar2.pack(side=LEFT, padx=2, pady=2, ipadx=23)
-insertar3 = Button(toolbar, text= "Cliente", command= Lideres, bg="white", fg="medium aquamarine")
-insertar3.pack(side=LEFT, padx=2, pady=2, ipadx=22)
-insertar4 = Button(toolbar, text= "Imagenes y Video", command= Lideres, bg="white", fg="medium aquamarine")
+insertar4 = Button(toolbar, text= "Imagenes y Video", command= Lideres, bg="white", fg="medium aquamarine") #falta poner boton para que abra imagen de mapa
 insertar4.pack(side=LEFT, padx=2, pady=2, ipadx=23)
 
 toolbar.pack(side=TOP, fill=X)
