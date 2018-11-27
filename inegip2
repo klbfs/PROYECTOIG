@@ -1,28 +1,41 @@
 from Tkinter import *
 
-def CuentaAdmin():
-	print("Clase Cuenta de Administrador")
-
+def login():
+	b=Tk()
+	en1=Label(b,text="usuario").grid(row=0,column=0)
+	en2=Label(b, text="contrasena").grid(row=1,column=0)
+	us1=Entry(b).grid(row=0,column=1)
+	pwd=Entry(b,show="*").grid(row=1,column=1)
+	ce=Button(b, text="crear cuenta").grid(row=2,column=0)
+	en11=Label(b, text="usuario").grid(row=3, column=0)
+	en22=Label(b,text="contrasena").grid(row=4, column=0)
+	us2=Entry(b).grid(row=3, column=1)
+	pwd2=Entry(b,show="*").grid(row=4,column=1)
+	if us1==us2 and pwd==pwd2:
+		print("login exitoso")
+	else:
+		j=Label(b, text="login no exitoso").grid(row=6, column=0)
+	b.mainloop()
 def Clases():
   v1=Toplevel(root)
-	e12=Label(v1, text="Actividad Economica")
-	e13=Label(v1, text="Buscador")
-	e14=Label(v1, text="Capital")
-	e15=Label(v1, text=Departamentos")
-	e16=Label(v1, text="Empresa")
-	e17=Label(v1, text="Estadisticas")
-	e18=Label(v1, text="Fundaciones")
-	e19=Label(v1, text="Instalaciones")
-	e20=Label(v1, text="Imagenes y Video")
-	e21=Label(v1, text="Informacion de la Empresa")
-	e22=Label(v1, text="Ubicacion")
-	e23=Label(v1, text="Redes Sociales")
+  e12=Label(v1, text="Actividad Economica")
+  e13=Label(v1, text="Buscador")
+  e14=Label(v1, text="Capital")
+  e15=Label(v1, text=Departamentos")
+  e16=Label(v1, text="Empresa")
+  e17=Label(v1, text="Estadisticas")
+  e18=Label(v1, text="Fundaciones")
+  e19=Label(v1, text="Instalaciones")
+  e20=Label(v1, text="Imagenes y Video")
+  e21=Label(v1, text="Informacion de la Empresa")
+  e22=Label(v1, text="Ubicacion")
+  e23=Label(v1, text="Redes Sociales")
   e12.pack()
   e13.pack()
   e14.pack()
   e15.pack()
   e16.pack()
-	e17.pack()
+  e17.pack()
   e18.pack()
   e19.pack()
   e20.pack()
@@ -32,19 +45,22 @@ def Clases():
   
 
 def Atributos():
-  v3=Toplevel(root)
+  	v3=Toplevel(root)
 	e111=Label(v3,text="De que clase?")
+	e111.pack()
+	en22=Entry(v3)
+	en22.pack()
 
 def Tecnicas_Prog():
 	v2=Toplevel(root)
-  e1=Label(v2, text="Profesor: Emiliavo Nava")
-	e2=Label(v2, text="Grupo 2")
-	e3=Label(v2, text="Horario: \n Lunes: 7:00 - 9:00 \n Miercoles: 7:00 - 9:00 \n Viernes 7:00 - 9:00")
-	e4=Label(v2, text="Semestre: 2019-1")
-  e1.pack()
-  e2.pack()
-  e3.pack()
-  e4.pack()
+        e1=Label(v2, text="Profesor: Emiliavo Nava")
+  	e2=Label(v2, text="Grupo 2")
+  	e3=Label(v2, text="Horario: \n Lunes: 7:00 - 9:00 \n Miercoles: 7:00 - 9:00 \n Viernes 7:00 - 9:00")
+  	e4=Label(v2, text="Semestre: 2019-1")
+  	e1.pack()
+  	e2.pack()
+  	e3.pack()
+  	e4.pack()
 def Referencias():
 	print("URL: http://www.beta.inegi.org.mx/temas/directorio/")
 
@@ -54,7 +70,7 @@ def MenuBusqueda():
 def Lideres():
 	print("Clase Lideres Empresariales")
 def busqueda():
-  b=Button(text="editar")
+  b=Button(text="editar")# command de la funcion de editar
   b1=Button(text="mostrar")
   b2=Button(text="agregar")
   b3=Button(text="eliminar")
@@ -102,8 +118,6 @@ subMenu3.add_separator()
 #TOOLBAR ****
 
 toolbar = Frame(root, bg="medium aquamarine")
-insertar = Button(toolbar, text= "Busqueda Avanzada", command= MenuBusqueda, bg="white", fg="medium aquamarine")
-insertar.pack(side=LEFT, padx=2, pady=2, ipadx=23)
 insertar1 = Button(toolbar, text= "Lideres Empresariales", command= Lideres, bg="white", fg="medium aquamarine")
 insertar1.pack(side=LEFT, padx=2, pady=2, ipadx=22)
 insertar2 = Button(toolbar, text= "Usuario", command= Lideres, bg="white", fg="medium aquamarine")
