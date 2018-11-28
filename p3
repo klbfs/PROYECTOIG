@@ -161,7 +161,7 @@ def Referencias():
 def MenuBusqueda():
 	print("Clase Menu Busqueda")
 def Lideres():
-	print("Clase Lideres Empresariales")
+	print("https://www.inegi.org.mx/app/mapa/denue/")
 
 	
 root = Tk()
