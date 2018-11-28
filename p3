@@ -134,16 +134,7 @@ def Clases():
 	e32.pack()
 	e33.pack()
 	e34.pack()
-	e35.pack()
-
-
-def Atributos():
-	v2=Toplevel(root)
-	entradaen=Entry(v2, text="hola")
-	entradaen.pack()	
-	
-
-	
+	e35.pack()		
 def Tecnicas_Prog():
 
 	otra_v=Toplevel(root)
@@ -191,8 +182,7 @@ subMenu2= Menu(menu)
 
 menu.add_cascade(label="Informacion Proyecto", menu=subMenu2)
 subMenu2.add_command(label="Clases", command= Clases )
-subMenu2.add_command(label="Atributos", command= Atributos)
-subMenu2.add_separator()
+
 subMenu2.add_command(label="Tecnicas de Programacion", command= Tecnicas_Prog)
 
 subMenu3 = Menu(menu)
