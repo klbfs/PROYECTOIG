@@ -165,6 +165,9 @@ def Lideres():
 
 	
 root = Tk()
+foto = PhotoImage(file="inegi.png")
+etiqueta= Label(root, image=foto)
+etiqueta.pack(side=TOP)
 
 
 bienvenida= Label(root, text="Bienvenido a la Pagina Oficial del INEGI",bg="grey50",fg="white",  font='Helvetica 14 bold')
