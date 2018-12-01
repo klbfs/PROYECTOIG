@@ -3,10 +3,16 @@
 from tkinter import *
 
 
-
+import Menu as mn
 from BaseDeDatos import BaseDeDatos
 from ControladorDeObjeto import ControladorDeObjeto
 from funciones import validacionEntera
+import funciones as fc
+
+def main():
+	fc.crearBases()
+
+	
 
 """
 def Busquedaa():
@@ -113,13 +119,13 @@ def Actividad_Economica():
 	Ventana_1=Label(Popup_1, text="Tipo empresa \nSector economico\n Razon social\nTamano\nExportaciones\nImportaciones\nAsociaciones\nInversionistas\nAccionistas",bg="white")
 	Ventana_1.pack(fill=X)
 
-def Captal_1():
+def Capital_1():
 
 
 	Popup_1=Toplevel()
 
 	Editar_CAP=Button(Popup_1, text="EDITAR",command=ControladorDeObjeto.editarObjeto(Comando_1))    #def funcion de editar
-	Mostrar_CAP= Button(Popup_1, text="MOSTRAR",command=BaseDeDatos.mostrarDatos(Comando_1))
+	Mostrar_CAP= Button(Popup_1, text="MOSTRAR",command=BaseDeDatos.mostrarDatos(Capital))
 	Eliminar_CAP= Button(Popup_1, text="ELIMINAR",command=ControladorDeObjeto.borrarObjeto(Comando_1))
 	Agregar_CAP= Button(Popup_1, text="AGREGAR",command=ControladorDeObjeto.buscarObjeto(Comando_1))
 	Editar_CAP.pack()
@@ -430,7 +436,7 @@ def Convertir():
 		Actividad_Economica()
 
 	if Comando_1 =="Capital":
-		Captal_1()
+		Capital_1()
 		
 	if Comando_1 =="Departamentos":
 		Departamentos_1()
@@ -469,6 +475,7 @@ def Convertir():
 Contrasena_2 = ''
 Usuario_2 = 'Aun no hay Datos Registrados'
 Comando_1 = ''
+main()
 root = Tk()
 root.title("Instituto Nacional de Estadisticas y Geografia")
 
